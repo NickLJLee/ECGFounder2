@@ -1,0 +1,37 @@
+# params for zeroshot eval
+zeroshot:
+  prompt_type: 'CKEPE'
+  prompt_dict: '/data1/1shared/lijun/ecg/ECGFounder_CLIP/zero_shot/CKEPE_prompt.json'
+  batch_size: 64
+  num_workers: 8
+  meta_data_path: '/data1/1shared/jinjiarui/run/ECG-LLM-main/Datasets'
+  meta_split_path: '/data1/1shared/lijun/ecg/github_code/MERL-ICML2024/finetune/data_split'
+  
+  test_sets:
+  ###
+    ptbxl_super_class:
+      data_path: 'ptb-xl'
+      split_path: 'ptbxl/super_class/ptbxl_super_class_test.csv'
+  ###
+    ptbxl_sub_class:
+      data_path: 'ptb-xl'
+      split_path: 'ptbxl/sub_class/ptbxl_sub_class_test.csv'
+  ###
+    ptbxl_form:
+      data_path: 'ptb-xl'
+      split_path: 'ptbxl/form/ptbxl_form_test.csv'
+  ###
+    ptbxl_rhythm:
+      data_path: 'ptb-xl'
+      split_path: 'ptbxl/rhythm/ptbxl_rhythm_test.csv'
+  # ###
+  #   icbeb:
+  #     data_path: 'icbeb2018/records500'
+  #     split_path: 'icbeb/icbeb_test.csv'
+  # ###
+  #   chapman:
+  #     data_path: ''
+  #     split_path: 'chapman/chapman_test.csv'
+
+# your model name
+# wandb_name: 'None'
